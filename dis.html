@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>DISTANCE</title>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+       <style>
+  fieldset {
+    display: block;
+    background-color: #ff7950;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 5px solid grey;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px grey;
+}
+legend {
+  padding-left: 10px;
+  border: 2px dashed grey;
+  background-color: #ff7950;
+  border-radius: 5px;
+}
+input[type="number"]:focus{
+    background-color:#DCDCDC;
+    color:#000;
+}
+body {
+    background-image: url("math.jpg");
+    background-size: cover;
+    font-family: Kaushan Script;
+}
+input[type="button"]{
+    height:30px;
+    background: grey;
+    color:#fff;
+    font-size:15px;
+    border-radius:10px;
+}
+</style>
+
+    </head>
+	 <fieldset style="opacity:.9;">
+    <legend> <h3> DISTANCE BETWEEN TWO'S COORDINATE POINTS(X,Y)</h3> </legend>
+    <body style="text-align:center">
+    <p>
+        <label>POINT 1:</label></br></br>
+        <input id="x1" type="number" name="x1" placeholder="  x1-coordinate" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input id="y1" type="number" name="y1" placeholder="  y1-coordinate" /></br></br>
+        <label>POINT 2:</label></br></br>
+        <input id="x2" type="number" name="x2" placeholder="  x2-coordinate" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input id="y2" type="number" name="y2"placeholder="  y2-coordinate" /></br></br>
+        <input id="result" type="button" value="Distance>>>" onclick="dist()"/>
+	        <div id="output"></div>
+     <script>
+	function dist(){
+	var x1 = document.getElementById("x1").value;
+	var x2 = document.getElementById("x2").value;
+	var y1 = document.getElementById("y1").value;
+	var y2 = document.getElementById("y2").value;
+    
+	var a = x1 - x2; 
+	var b = y1 - y2; 
+	var c = Math.sqrt( a*a + b*b );
+
+	document.getElementById('output').innerHTML = "<div style='border:3px solid grey; border-radius: 5px; padding:4px; margin-left: 250px; margin-right: 250px; '>" + c + " units" + "</div>";
+			}
+     </script>
+      </fieldset>
+    </p>
+
+       
+    </body>
+</html>
